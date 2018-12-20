@@ -25,9 +25,11 @@ docker run \<image:tag> will print usage
 Please provide a movie title
 
 **Usage:**
+
 * docker run -e OMDB_API_KEY=\<key> \<image:tag> \<movie title>
 
 Optionally you can pass your OMDB API Key into docker build, but is not secure
+
 * docker build --build-arg OMDB_API_KEY=\<key> -t \<image:tag> .
 * docker run \<image:tag> \<movie title>
 
@@ -36,5 +38,6 @@ Optionally you can pass your OMDB API Key into docker build, but is not secure
 docker run -e OMDB_API_KEY=\<value> -e DEBUG=true \<image:tag> \<title>
 
 **Examples**:
+
 * docker run -e OMDB_API_KEY=\<value> omdbapi:v1 real genius
 * docker run -e OMDB_API_KEY=\<value> -e DEBUG=true omdbapi:v1  real
