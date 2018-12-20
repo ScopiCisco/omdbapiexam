@@ -34,3 +34,7 @@ Optionally you can pass your OMDB API Key into docker build, but is not secure
 **Note**:  To debug OMDB lookup you can pass the argument DEBUG=true to run
 
 docker run -e OMDB_API_KEY=\<value> -e DEBUG=true \<image:tag> \<title>
+
+**Examples**:
+* docker run -e OMDB_API_KEY=\<value> omdbapi:v1 real genius
+* docker run -e OMDB_API_KEY=\<value> -e DEBUG=true omdbapi:v1  real
