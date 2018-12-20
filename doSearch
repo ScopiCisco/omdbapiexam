@@ -1,6 +1,8 @@
 #!/bin/ash
 if [[ -z "$1" ]]; then
    echo "Please provide a movie title"
+   echo "Usage:"
+   echo "docker run -t <image:tag> <title>"
    exit 1
 fi
 MOVIE=$(echo $* | sed 's/ /+/g')
