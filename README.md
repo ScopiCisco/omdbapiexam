@@ -1,9 +1,33 @@
 # omdbapiexam
 
-[Build]
+A small docker image that allows you to query OMDB using their API.
+
+##Build
 docker build -t <image:tag> .
 
-[Run]
+Optionally you can pass your OMDB API Key into the build of the docker image via
+
+docker build --build-arg OMDB_API_KEY=<value> -t
+
+Optionally you can use GNUMake
+
+make IMAGE=<image:tag>
+
+##Run
 docker run <image:tag> will print usage
 
-docker run -t <image:tag> <title>
+*
+Please provide a movie title
+
+Usage:
+docker run -e OMDB_API_KEY=<key> <image:tag> <movie title>
+
+Optionally you can pass your OMDB API Key into docker build, but is not secure
+docker build --build-arg OMDB_API_KEY=<key> -t <image:tag> .
+docker run <image:tag> <movie title>
+*
+
+__Note__
+To debug OMDB lookup you can pass the argument DEBUG=true to run
+
+docker run -e OMDB_API_KEY=<value> -e DEBUG=true <image:tag> <title>
